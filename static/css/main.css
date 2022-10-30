@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: black;
+    margin: 0;
+    background-color: rgb(27,32,40);
+    overflow-x: hidden;
+  }
+
+
+/* Index.html */
+
+/* Intro Section */
+
+#intro-section {
+    height: 1250px;
+    background-image: url('/static/images/index-background.jpg');
+    background-size: cover;
+    margin-top: -200px;
+}
