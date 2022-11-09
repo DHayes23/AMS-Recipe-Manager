@@ -21,13 +21,13 @@
 /* Navbar */
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: white solid 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: rgba(255, 255, 255, 1) solid 3px;
 }
 
 .navbar-brand {
     color: white;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     text-decoration: none;
     margin-left: 50px;
     margin-top: 5px;
@@ -45,7 +45,7 @@
     margin-right: 50px;
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
 }
@@ -84,7 +84,6 @@
     color: white;
     font-family: 'Comfortaa';
     text-align: center;
-
 }
 
 #intro-section-heading {
