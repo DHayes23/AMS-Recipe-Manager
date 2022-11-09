@@ -11,7 +11,7 @@
   body {
     color: black;
     margin: 0;
-    background-color: rgb(27,32,40);
+    background-color: rgb(30, 30, 30);
     overflow-x: hidden;
   }
 
@@ -107,4 +107,57 @@
 
 .intro-section-icon {
     margin-bottom: 20px;
+}
+
+
+/* Recipe Cards Section */
+
+#recipe-cards-section-header {
+    color: white;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-size: 3rem;
+}
+
+#recipe-cards-section-header-span {
+    color: orangered;
+}
+
+#add-recipe-button {
+    text-align: center;
+}
+
+.recipe-card {
+    background-color: #333333;
+    border-radius: 25px;
+    margin-top: 100px;
+    height: 27rem;
+    width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-card-title {
+    color: orangered;
+    font-size: 2.2rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.recipe-card-text {
+    color: white;
+}
+
+.recipe-card-link-icon {
+    color: orangered;
+    margin-top: 25px;
+    padding: 31.5px;
+    border: solid white 2px;
+    border-bottom-right-radius: 40px;
+}
+
+.recipe-card-link-icon:hover {
+    color: white;
+    border: solid orangered 4px;
 }
