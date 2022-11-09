@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Cutive+Mono&family=Gruppo&family=Josefin+Slab&family=Montserrat&family=Poiret+One&family=Red+Hat+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: black;
+    margin: 0;
+    background-color: rgb(27,32,40);
+    overflow-x: hidden;
+  }
+
+
+/* Base.html */
+
+/* Navbar */
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: rgba(255, 255, 255, 1) solid 3px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 4.5rem;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    font-family: 'Red Hat Mono';
+}
+
+#brand-span {
+    color: orangered;
+}
+
+.nav-link {
+    font-family: 'Cutive Mono';
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-link:hover {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+#sign-up-link {
+    border: 3px solid orangered;
+}
+#sign-up-link:hover {
+    border: 3px solid white;
+}
+/* Index.html */
+
+/* Intro Section */
+
+#intro-section {
+    height: 1450px;
+    background-image: url('/static/images/index-background.jpg');
+    background-size: cover;
+    margin-top: -200px;
+}
+
+#intro-section-box {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 625px;
+    width: 550px;
+    margin-top: 525px;
+    margin-left: 250px;
+    border-radius: 50px;
+    border: white solid 4px;
+    color: white;
+    font-family: 'Comfortaa';
+    text-align: center;
+}
+
+#intro-section-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    padding: 10px;
+}
+
+.intro-section-text {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.intro-section-span {
+    color: orangered;
+    font-weight: bold;
+}
+
+.intro-section-icon {
+    margin-bottom: 20px;
+}
