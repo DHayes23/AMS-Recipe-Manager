@@ -127,8 +127,30 @@
     color: orangered;
 }
 
-#add-recipe-button {
+#recipe-add-button {
+    background-color: rgb(35, 35, 35);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.9), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;  
+}
+
+#recipe-add-button:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+#recipe-add-icon {
+    display:inline-block;
+    line-height: 50px;
+    color:white;
     text-align: center;
+    vertical-align: bottom;
+    padding-top: 0.55rem;
 }
 
 .recipe-card {
@@ -145,7 +167,8 @@
 }
 
 .recipe-card:hover {
-    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);    
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+    cursor: pointer;  
 }
 
 .recipe-card-title {
