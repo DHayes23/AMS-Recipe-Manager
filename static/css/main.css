@@ -136,7 +136,7 @@
     height: 5rem;
     border-radius: 50%;
     box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.9), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;  
 }
 
@@ -163,7 +163,7 @@
     margin-right: auto;
     padding: 5px;
     box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
-    transition: all 0.8s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .recipe-card:hover {
