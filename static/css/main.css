@@ -215,3 +215,15 @@
     color: white;
     border: solid orangered 4px;
 }
+
+
+/* Footer */
+
+#copyright-text {
+    color: white;
+    font-family: 'Comfortaa';
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    padding: 25px;
+    border-radius: 10px;
+}
