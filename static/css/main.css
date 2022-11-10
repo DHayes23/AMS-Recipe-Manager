@@ -11,7 +11,7 @@
   body {
     color: black;
     margin: 0;
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(20, 20, 20);
     overflow-x: hidden;
   }
 
@@ -117,7 +117,10 @@
     text-align: center;
     margin-top: 75px;
     margin-bottom: 75px;
-    font-size: 3rem;
+    font-size: 2.7rem;
+    font-family: "Poiret One";
+    padding: 20px;
+
 }
 
 #recipe-cards-section-header-span {
@@ -129,24 +132,34 @@
 }
 
 .recipe-card {
-    background-color: #333333;
-    border-radius: 25px;
-    margin-top: 100px;
-    height: 27rem;
-    width: 18rem;
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+    margin-top: 75px;
+    height: 32rem;
+    width: 21rem;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 0.8s ease-in-out;
+}
+
+.recipe-card:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);    
 }
 
 .recipe-card-title {
     color: orangered;
-    font-size: 2.2rem;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    font-size: 2.3rem;
+    font-family: 'Poiret One';
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .recipe-card-text {
     color: white;
+    font-size: 1rem;
+    font-family: 'Cutive Mono';
 }
 
 .recipe-card-link-icon {
