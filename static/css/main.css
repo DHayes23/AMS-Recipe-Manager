@@ -112,6 +112,10 @@
 
 /* Recipe Cards Section */
 
+#recipe-cards-section {
+    margin-bottom: 250px;
+}
+
 #recipe-cards-section-header {
     color: white;
     text-align: center;
@@ -171,12 +175,26 @@
     cursor: pointer;  
 }
 
+.recipe-card-icon {
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    cursor: pointer;  
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
 .recipe-card-title {
     color: orangered;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Poiret One';
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 30px;
+}
+
+.recipe-card-author {
+    margin-bottom: 20px !important;
+    font-family: 'Comfortaa';
+    font-weight: bold;
 }
 
 .recipe-card-text {
