@@ -11,7 +11,7 @@
   body {
     color: black;
     margin: 0;
-    background-color: rgb(27,32,40);
+    background-color: rgb(20, 20, 20);
     overflow-x: hidden;
   }
 
@@ -107,4 +107,111 @@
 
 .intro-section-icon {
     margin-bottom: 20px;
+}
+
+
+/* Recipe Cards Section */
+
+#recipe-cards-section {
+    margin-bottom: 250px;
+}
+
+#recipe-cards-section-header {
+    color: white;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-size: 2.7rem;
+    font-family: "Poiret One";
+    padding: 20px;
+
+}
+
+#recipe-cards-section-header-span {
+    color: orangered;
+}
+
+#recipe-add-button {
+    background-color: rgb(35, 35, 35);
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.9), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;  
+}
+
+#recipe-add-button:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+#recipe-add-icon {
+    display:inline-block;
+    line-height: 50px;
+    color:white;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 0.55rem;
+}
+
+.recipe-card {
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+    margin-top: 75px;
+    height: 32rem;
+    width: 21rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 1s ease-in-out;
+}
+
+.recipe-card:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+    cursor: pointer;  
+}
+
+.recipe-card-icon {
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    cursor: pointer;  
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.recipe-card-title {
+    color: orangered;
+    font-size: 2rem;
+    font-family: 'Poiret One';
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.recipe-card-author {
+    margin-bottom: 20px !important;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+.recipe-card-text {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Cutive Mono';
+}
+
+.recipe-card-link-icon {
+    color: orangered;
+    margin-top: 25px;
+    padding: 31.5px;
+    border: solid white 2px;
+    border-bottom-right-radius: 40px;
+}
+
+.recipe-card-link-icon:hover {
+    color: white;
+    border: solid orangered 4px;
 }
