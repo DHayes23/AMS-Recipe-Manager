@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Recipease | My Profile</title>
+{% endblock %}
+
+{% block body %}
+
+<section id="profile-section">
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+            <h1 id="profile-heading">Hi <span class="profile-heading-span">{{current_user.username}}</span>, welcome to your profile.</h1>
+            <p class="profile-sub-heading">
+                You can view, edit and delete your recipes here.
+            </p>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}
