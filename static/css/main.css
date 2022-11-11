@@ -227,3 +227,75 @@
     padding: 25px;
     border-radius: 10px;
 }
+
+
+/* Authentication */
+
+.auth-section {
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+.auth-heading {
+    color: white;
+    margin-bottom: 50px;
+    font-family: "Poiret One";
+}
+
+.auth-heading-span {
+    color: orangered;
+}
+
+.auth-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border-radius: 10px;
+}
+
+.auth-form input {
+    color: white;
+    font-size: 1.7rem;
+    font-family: 'Comfortaa';
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border: none;
+
+}
+
+.auth-form input[type=text] {
+    width: 60%;
+    border: none;
+}
+
+.auth-form input[type=password] {
+    width: 60%;
+}
+
+.auth-form input[type=submit] {
+    width: 33%;
+    color: orangered;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    
+}
+
+.auth-form input[type=submit]:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+.auth-form input:focus {
+    border: none;
+    outline: none;
+
+}
+
+.auth-form ::placeholder {
+    color: white;
+    font-size: 1.7rem;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+}
