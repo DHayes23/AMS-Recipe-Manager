@@ -299,3 +299,27 @@
     background-color: rgb(20, 20, 20);
     box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
 }
+
+
+/* Profile Section */
+
+#profile-section {
+    margin-top: 225px;
+    margin-bottom: 200px;
+}
+
+#profile-heading {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 2.75rem;
+}
+
+.profile-sub-heading {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 1.5rem;
+}
+
+.profile-heading-span {
+    color: orangered;
+}
