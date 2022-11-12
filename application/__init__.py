@@ -17,6 +17,6 @@ app.config['SECRET_KEY'] = os.environ.get("RECIPEASE_DB_SECRET_KEY")
 
 db = SQLAlchemy(app)
 
-from application import forms
 from application import routes
 from application import models
+from application import forms

@@ -3,6 +3,8 @@ from flask import render_template, url_for, redirect
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
 from application.forms import LoginForm, SignUpForm
+from application.models import User
+
 
 bcrypt = Bcrypt(app)
 
