@@ -41,7 +41,8 @@ def login():
 @app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
-    return render_template('profile.html')
+    all_recipes = Recipe.query.all()
+    return render_template('profile.html', all_recipes=all_recipes)
 
 
 @app.route('/logout', methods=['GET', 'POST'])

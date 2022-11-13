@@ -15,6 +15,43 @@
             </p>
         </div>
     </div>
-    
+    <div class="row text-center">
+        <a href="{{url_for('add_recipe')}}">
+            <div id="recipe-add-button" class="col-6 offset-3">
+                <p>
+                    <i id="recipe-add-icon" class="text-center fa-plus fa-4x" style="color: orangered;"></i></a>
+                </p>
+            </div> 
+        </a>
+    </div>
+    {% for recipe in all_recipes %}
+        {% if recipe.author==current_user.username %}
+            <div class="col-4 text-center">
+                <div class="recipe-card card">
+                    <div class="card-body">
+                        <p>
+                            {% if recipe.diet=='meat_eater' %}
+                            <i class="recipe-card-icon fa-duotone fa-meat" style="--fa-primary-color: rgb(170, 58, 58); --fa-secondary-color: rgb(255, 255, 255); --fa-secondary-opacity: 1;"></i>
+                            {% endif%}
+
+                            {% if recipe.diet=='vegetarian' %}
+                            <i class="recipe-card-icon fa-duotone fa-carrot" style="--fa-primary-color: rgb(0, 151, 8); --fa-secondary-color: rgb(233, 113, 0); --fa-secondary-opacity: 1;"></i>
+                            {% endif%}
+
+
+                            {% if recipe.diet=='vegan' %}
+                            <i class="recipe-card-icon fa-duotone fa-leaf" style="--fa-primary-color: rgba(255, 255, 255, 0.637); --fa-secondary-color: rgb(5, 160, 0); --fa-secondary-opacity: 1;"></i>
+                            {% endif%}
+
+                        </p>
+                        <h5 class="recipe-card-title card-title">{{recipe.name}}</h5>
+                        <h6 class="recipe-card-author card-subtitle mb-2 text-muted">Created by: {{ recipe.author }}</h6>
+                        <p class="recipe-card-text card-text">{{ recipe.description }}</p>
+                        <a href="#" class="card-link"></a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}    
 </section>
 {% endblock %}
