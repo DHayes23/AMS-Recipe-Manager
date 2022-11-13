@@ -1,9 +1,9 @@
 from application import app, db
-from flask import render_template, url_for, redirect
+from flask import render_template, url_for, redirect, request
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_bcrypt import Bcrypt
-from application.forms import LoginForm, SignUpForm
-from application.models import User
+from application.forms import LoginForm, SignUpForm, RecipeForm
+from application.models import User, Recipe
 
 
 bcrypt = Bcrypt(app)
@@ -21,8 +21,8 @@ def load_user(user_id):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
+    all_recipes = Recipe.query.all()
+    return render_template('index.html', all_recipes=all_recipes)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -63,3 +63,29 @@ def signup():
         return redirect(url_for('login'))
 
     return render_template('signup.html', form=form)
+
+
+@app.route('/add_recipe', methods = ['GET', 'POST'])
+def add_recipe():
+    form = RecipeForm()
+
+    if request.method == 'POST':
+
+        if form.validate_on_submit():
+
+            recipe = Recipe(
+                name = form.name.data,
+                author = current_user.username,
+                description = form.description.data,
+                servings = form.servings.data,
+                diet = form.diet.data,
+                ingredients = form.ingredients.data,
+                instructions = form.instructions.data,
+            )
+            db.session.add(recipe)
+            db.session.commit()
+
+            return(redirect(url_for('index')))
+            
+
+    return render_template('add_recipe.html', form=form)

@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, IntegerField, SelectField
 from wtforms.validators import InputRequired, Length, ValidationError
 from application.models import User
 
@@ -26,3 +26,17 @@ class LoginForm(FlaskForm):
     password = PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password"})
 
     submit = SubmitField("Log In")
+
+
+class RecipeForm(FlaskForm):
+    name = StringField("Name")
+    description = StringField("Description")
+    servings = IntegerField("Servings")
+    diet = SelectField("Diet", choices=[
+        ("meat_eater", "Meat Eater"), 
+        ("vegetarian", "Vegetarian"), 
+        ("vegan", "Vegan")
+    ])
+    ingredients = StringField("Ingredients")
+    instructions = StringField("Instructions")
+    submit = SubmitField("Submit")
