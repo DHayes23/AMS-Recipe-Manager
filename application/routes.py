@@ -98,8 +98,8 @@ def add_recipe():
 def update_recipe(recipe_id):
     recipe_to_update = Recipe.query.get(recipe_id)
     form = RecipeForm()
-
-    if request.method == 'POST':
+    
+    if recipe_to_update.author == current_user.username and request.method == 'POST':
         recipe_to_update.name = form.name.data
         recipe_to_update.author = current_user.username
         recipe_to_update.description = form.description.data
@@ -112,4 +112,18 @@ def update_recipe(recipe_id):
         return(redirect(url_for('index')))
     
     return render_template('update_recipe.html', recipe_to_update=recipe_to_update, form=form)
-        
+
+
+@app.route('/delete_recipe/<int:recipe_id>', methods = ['GET', 'POST'])
+@login_required
+def delete_recipe(recipe_id):
+    recipe_to_delete = Recipe.query.get(recipe_id)
+    if recipe_to_delete.author == current_user.username:
+
+        db.session.delete(recipe_to_delete)
+        db.session.commit()
+    else:
+        return(redirect(url_for('index')))
+
+
+    return(redirect(url_for('index')))

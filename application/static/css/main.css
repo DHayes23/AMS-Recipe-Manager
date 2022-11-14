@@ -339,6 +339,10 @@
     cursor: pointer; 
 }
 
+.profile-recipe-button p {
+    display: inline;
+}
+
 
 .profile-recipe-button:hover {
     box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
@@ -352,5 +356,4 @@
     vertical-align: bottom;
     padding-top: 1.5rem;
     padding-left: 0.4rem;
-    
 }
