@@ -81,6 +81,7 @@ def add_recipe():
                 description = form.description.data,
                 servings = form.servings.data,
                 diet = form.diet.data,
+                cooking_time =form.cooking_time.data,
                 ingredients = form.ingredients.data,
                 instructions = form.instructions.data,
             )
@@ -105,6 +106,7 @@ def update_recipe(recipe_id):
         recipe_to_update.description = form.description.data
         recipe_to_update.servings = form.servings.data
         recipe_to_update.diet = form.diet.data
+        cooking_time =form.cooking_time.data,
         recipe_to_update.ingredients = form.ingredients.data
         recipe_to_update.instructions = form.instructions.data
         db.session.commit()
@@ -127,3 +129,10 @@ def delete_recipe(recipe_id):
 
 
     return(redirect(url_for('index')))
+
+
+@app.route('/view_recipe/<int:recipe_id>', methods = ['GET'])
+def view_recipe(recipe_id):
+    recipe_to_view = Recipe.query.get(recipe_id)
+
+    return render_template('view_recipe.html', recipe_to_view=recipe_to_view)

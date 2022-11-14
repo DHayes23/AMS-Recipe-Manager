@@ -13,6 +13,7 @@ class Recipe(db.Model):
     name = db.Column(db.String(60), nullable=False)
     author = db.Column(db.String, nullable=False)
     description = db.Column(db.String(180), nullable=False)
+    cooking_time = db.Column(db.Integer, nullable=False)
     servings = db.Column(db.Integer, nullable=False)
     diet = db.Column(db.String(30), nullable=False)
     ingredients = db.Column(db.String(500), nullable=False)

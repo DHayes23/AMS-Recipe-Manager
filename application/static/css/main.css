@@ -279,8 +279,7 @@
     width: 33%;
     color: orangered;
     border-radius: 10px;
-    transition: all 1s ease-in-out;
-    
+    transition: all 1s ease-in-out; 
 }
 
 .auth-form input[type=submit]:hover {
@@ -356,4 +355,74 @@
     vertical-align: bottom;
     padding-top: 1.5rem;
     padding-left: 0.4rem;
+}
+
+
+/* View Recipe */
+
+.view-recipe-section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.view-recipe-heading {
+    color: white;
+    margin-bottom: 10px;
+    font-family: "Poiret One";
+    font-size: 2.8rem;
+}
+
+.view-recipe-heading-span {
+    color: orangered;
+}
+
+.view-recipe-sub-heading {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+}
+
+.view-recipe-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Comfortaa';
+}
+
+.view-recipe-diet-icon {
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    cursor: pointer;  
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.view-recipe-general-span {
+    color: orangered;
+}
+
+.view-recipe-box-heading {
+    margin-bottom: 25px;
+    font-family: 'Poiret One';
+    color: orangered;
+    font-size: 2rem;
+}
+
+.view-recipe-box-text {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#view-recipe-details {
+    height: fit-content;
+}
+
+.view-recipe-link {
+    text-decoration: none;
 }
