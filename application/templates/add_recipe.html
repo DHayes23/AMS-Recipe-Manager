@@ -1,30 +1,50 @@
-<body>
-    <h1>Add a new recipe:</h1>
-    <p>
-        <div class='form'>
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Recipease | Log In</title>
+{% endblock %}
+
+{% block body %}
+<section class="recipe-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-4 offset-4 text-center">
+                <h1 class="recipe-heading"><span class="recipe-heading-span">Create</span> a new recipe</h1>
+            </div>
             <form method='POST' action=''>
-                <!-- hidden_tag() is required for form validation -->
-                {{ form.hidden_tag() }}
-                <!-- Each field displays its label followed by the input field itself -->
-                {{ form.name.label }} {{ form.name }}
-                <br>
-                {{ form.description.label }} {{ form.description }}
-                <br>
-                <br>
-                {{ form.diet.label }} {{ form.diet }}
-                <br>
-                {{ form.cooking_time.label }} {{ form.cooking_time }}
-                <br>
-                <br>
-                {{ form.servings.label }} {{ form.servings }}
-                <br>
-                {{ form.ingredients.label }} {{ form.ingredients }}
-                <br>
-                {{ form.instructions.label }} {{ form.instructions }}
-                <!-- form.submit is a button -->
-                {{ form.submit }}
-                <br>
+                <div class="row">
+                    <div class="recipe-form recipe-form-left col-4 text-center">
+                        <!-- hidden_tag() is required for form validation -->
+                        {{ form.hidden_tag() }}
+                        <!-- Each field displays its label followed by the input field itself -->
+                        {{ form.name.label }} <br> {{ form.name }}
+                        <br>
+                        {{ form.diet.label }} <br> {{ form.diet }}
+                        <br>
+                        {{ form.description.label }} <br> {{ form.description }}
+                        <br>
+                        <br>
+                        {{ form.cooking_time.label }} <br> {{ form.cooking_time }}
+                        <br>
+                        <br>
+                        {{ form.servings.label }} <br> {{ form.servings }}
+                        <br>
+                    </div>
+                    <div class="recipe-form recipe-form-right text-center col-7 offset-1">
+                        {{ form.ingredients.label }} <br> {{ form.ingredients }}
+                        <br>
+                        {{ form.instructions.label }} <br> {{ form.instructions }}
+                        <!-- form.submit is a button -->
+                        <br>
+                        {{ form.submit }}
+                        <br>
+                    </div>
+                </div>
+                
             </form>
         </div>
-    </p>
-</body>
+    </div>
+</section>
+
+{% endblock %}
