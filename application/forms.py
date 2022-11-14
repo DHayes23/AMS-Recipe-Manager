@@ -30,15 +30,15 @@ class LoginForm(FlaskForm):
 
 
 class RecipeForm(FlaskForm):
-    name = StringField("Name")
-    description = StringField("Description", widget=TextArea())
+    name = StringField("Name", validators=[InputRequired(), Length(min=10, max=60)])
+    description = StringField("Description", validators=[InputRequired(), Length(min=20, max=180)], widget=TextArea())
     diet = SelectField("Diet", choices=[
         ("meat_eater", "Meat Eater"), 
         ("vegetarian", "Vegetarian"), 
         ("vegan", "Vegan")
     ])
-    cooking_time = IntegerField("Cooking Time (Minutes)")
-    servings = IntegerField("Servings")
-    ingredients = StringField("Ingredients", widget=TextArea())
-    instructions = StringField("Instructions", widget=TextArea())
+    cooking_time = IntegerField("Cooking Time (Minutes)", validators=[InputRequired()])
+    servings = IntegerField("Servings", validators=[InputRequired()])
+    ingredients = StringField("Ingredients", validators=[InputRequired(), Length(min=20, max=500)], widget=TextArea())
+    instructions = StringField("Instructions", validators=[InputRequired(), Length(min=20, max=1000)], widget=TextArea())
     submit = SubmitField("Submit")
