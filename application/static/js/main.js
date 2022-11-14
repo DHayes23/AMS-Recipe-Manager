@@ -13,7 +13,7 @@ function addRecipeAnimation() {
 
 document.querySelectorAll('.recipe-card').forEach(div => {
     div.addEventListener('click', function() {
-      this.classList.add('animate__animated', 'animate__backOutRight');
+      this.classList.add('animate__backOutRight');
     })
   });
 
