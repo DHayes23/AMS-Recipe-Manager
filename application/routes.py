@@ -100,13 +100,23 @@ def update_recipe(recipe_id):
     recipe_to_update = Recipe.query.get(recipe_id)
     form = RecipeForm()
     
+    if request.method == 'GET':
+        form.name.data = recipe_to_update.name
+        form.description.data = recipe_to_update.description
+        form.servings.data = recipe_to_update.servings
+        form.diet.data = recipe_to_update.diet
+        form.cooking_time.data = recipe_to_update.cooking_time
+        form.ingredients.data = recipe_to_update.ingredients
+        form.instructions.data = recipe_to_update.instructions
+        
+
     if recipe_to_update.author == current_user.username and request.method == 'POST':
         recipe_to_update.name = form.name.data
         recipe_to_update.author = current_user.username
         recipe_to_update.description = form.description.data
         recipe_to_update.servings = form.servings.data
         recipe_to_update.diet = form.diet.data
-        cooking_time =form.cooking_time.data,
+        recipe_to_update.cooking_time = form.cooking_time.data
         recipe_to_update.ingredients = form.ingredients.data
         recipe_to_update.instructions = form.instructions.data
         db.session.commit()
