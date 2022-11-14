@@ -88,7 +88,7 @@ def add_recipe():
             db.session.add(recipe)
             db.session.commit()
 
-            return(redirect(url_for('index')))
+            return(redirect(url_for('profile')))
             
 
     return render_template('add_recipe.html', form=form)
@@ -121,7 +121,7 @@ def update_recipe(recipe_id):
         recipe_to_update.instructions = form.instructions.data
         db.session.commit()
 
-        return(redirect(url_for('index')))
+        return(redirect(url_for('profile')))
     
     return render_template('update_recipe.html', recipe_to_update=recipe_to_update, form=form)
 
@@ -135,10 +135,10 @@ def delete_recipe(recipe_id):
         db.session.delete(recipe_to_delete)
         db.session.commit()
     else:
-        return(redirect(url_for('index')))
+        return(redirect(url_for('profile')))
 
 
-    return(redirect(url_for('index')))
+    return(redirect(url_for('profile')))
 
 
 @app.route('/view_recipe/<int:recipe_id>', methods = ['GET'])
