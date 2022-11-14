@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Recipease | {{recipe_to_view.name}}</title>
+{% endblock %}
+
+{% block body %}
+
+<section class="view-recipe-section">
+    <div class="container">
+        <div class="row">
+            <div class=" col-4 offset-4 text-center">
+                {% if recipe_to_view.diet=='meat_eater' %}
+                    <i class="view-recipe-diet-icon fa-duotone fa-meat" style="--fa-primary-color: rgb(170, 58, 58); --fa-secondary-color: rgb(255, 255, 255); --fa-secondary-opacity: 1;"></i>
+                {% endif%}
+
+                {% if recipe_to_view.diet=='vegetarian' %}
+                    <i class="view-recipe-diet-icon fa-duotone fa-carrot" style="--fa-primary-color: rgb(0, 151, 8); --fa-secondary-color: rgb(233, 113, 0); --fa-secondary-opacity: 1;"></i>
+                {% endif%}
+
+                {% if recipe_to_view.diet=='vegan' %}
+                    <i class="view-recipe-diet-icon fa-duotone fa-leaf" style="--fa-primary-color: rgba(255, 255, 255, 0.637); --fa-secondary-color: rgb(5, 160, 0); --fa-secondary-opacity: 1;"></i>
+                {% endif%}
+                
+                <h1 class="view-recipe-heading">{{ recipe_to_view.name }}</h1>
+                {% if current_user.username == recipe_to_view.author%}
+                    <p class="view-recipe-sub-heading">
+                        This is <span class="view-recipe-heading-span">your</span> recipe
+                    </p>
+                {% else %}
+                    <p class="view-recipe-sub-heading">
+                        This recipe is brought to you by <span class="view-recipe-heading-span">{{recipe_to_view.author}}</span>
+                    </p>
+                {% endif %}
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div id="view-recipe-details" class="view-recipe-box col-4 text-center">
+                <div class="row">
+                    <div class="col-5 offset-1"><i class="fa-thin fa-clock fa-2x"></i></div>
+                    <div class="col-5"><i class="fa-thin fa-plate-utensils fa-2x"></i></div>
+                    
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-5 offset-1"><p>Ready in <span class="view-recipe-general-span">{{ recipe_to_view.cooking_time }}</span> minutes</p></div>
+                    <div class="col-5"><p>Serves <span class="view-recipe-general-span">{{ recipe_to_view.servings }}</span></p></div>
+                </div>
+                <br>
+                {{recipe_to_view.description}}
+                <br>
+                {% if current_user.username == recipe_to_view.author%}
+                <hr>
+                    <div class="row">
+                        <a href="{{ url_for('update_recipe', recipe_id=recipe_to_view.id) }}"><p class="profile-recipe-button col-4 offset-4"><i class="text-center fa-thin fa-pen-to-square fa-2x profile-recipe-icon"></i></a></p>
+                        <p class="profile-recipe-button col-4"><a type="button" class="" data-bs-toggle="modal" data-bs-target="#recipe-delete-modal-{{recipe_to_view.id}}"><i class="text-center fa-thin fa-trash fa-2x profile-recipe-icon"></i></a></p>
+                    </div>
+                    <div class="modal fade" id="recipe-delete-modal-{{recipe_to_view.id}}" tabindex="-1" aria-labelledby="recipe-delete-modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-white" id="recipe-delete-modalLabel">Are you sure you want to delete this recipe?</h1>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe_to_view.id) }}" class="btn btn-danger">Delete</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="view-recipe-box col-7 offset-1 text-center">
+                <h2 class="view-recipe-box-heading">
+                    Ingredients
+                </h2>
+                <p class="view-recipe-box-text">
+                    {{recipe_to_view.ingredients}}
+                </p>
+                <br>
+                <h3 class="view-recipe-box-heading">
+                    Instructions
+                </h3>
+                <p class="view-recipe-box-text">
+                    {{recipe_to_view.instructions}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

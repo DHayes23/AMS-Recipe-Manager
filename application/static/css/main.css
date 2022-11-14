@@ -279,8 +279,7 @@
     width: 33%;
     color: orangered;
     border-radius: 10px;
-    transition: all 1s ease-in-out;
-    
+    transition: all 1s ease-in-out; 
 }
 
 .auth-form input[type=submit]:hover {
@@ -318,8 +317,252 @@
     color: white;
     font-family: "Poiret One";
     font-size: 1.5rem;
+    margin-bottom: 75px;
 }
 
 .profile-heading-span {
     color: orangered;
+}
+
+.profile-recipe-button {
+    background-color: rgb(35, 35, 35);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.9), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; 
+}
+
+.profile-recipe-button p {
+    display: inline;
+}
+
+
+.profile-recipe-button:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+.profile-recipe-icon {
+    display:inline-block;
+    line-height: 50px;
+    color:orangered;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 1.5rem;
+    padding-left: 0.4rem;
+}
+
+
+/* View Recipe */
+
+.view-recipe-section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.view-recipe-heading {
+    color: white;
+    margin-bottom: 10px;
+    font-family: "Poiret One";
+    font-size: 2.8rem;
+}
+
+.view-recipe-heading-span {
+    color: orangered;
+}
+
+.view-recipe-sub-heading {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+}
+
+.view-recipe-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Comfortaa';
+}
+
+.view-recipe-diet-icon {
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    cursor: pointer;  
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+.view-recipe-general-span {
+    color: orangered;
+}
+
+.view-recipe-box-heading {
+    margin-bottom: 25px;
+    font-family: 'Poiret One';
+    color: orangered;
+    font-size: 2rem;
+}
+
+.view-recipe-box-text {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#view-recipe-details {
+    height: fit-content;
+}
+
+.view-recipe-link {
+    text-decoration: none;
+}
+
+/* Add/Update Recipe */
+
+.recipe-section {
+    margin-top: 250px;
+    margin-bottom: 200px;
+}
+
+.recipe-heading {
+    color: white;
+    margin-bottom: 50px;
+    font-family: "Poiret One";
+    font-size: 2.7rem;
+}
+
+.recipe-heading-span {
+    color: orangered;
+}
+
+.recipe-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border-radius: 10px;
+    font-family: 'Comfortaa';
+    font-size: 1.4rem;
+
+    height: fit-content;
+}
+
+.recipe-form select {
+    color: white;
+    font-family: 'Comfortaa';
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border: none;
+    width: 70%;
+    height: 20%;
+    outline: none;
+    padding-top: 10px;
+
+}
+    
+
+.recipe-form-left textarea{
+    color: white;
+    font-family: 'Comfortaa';
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border: none;
+    width: 70%;
+    height: 20%;
+    outline: none;
+    padding-top: 10px;
+}
+
+.recipe-form-right textarea{
+    color: white;
+    font-family: 'Comfortaa';
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border: none;
+    width: 90%;
+    height: 14.2rem;
+    outline: none;
+    padding-top: 10px;
+
+}
+
+.recipe-form label {
+    color: white;
+}
+
+.recipe-form input {
+    color: white;
+    font-family: 'Comfortaa';
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    border: none;
+    height: 7.5%;
+
+}
+
+.recipe-form input[type=text] {
+    width: 66%;
+    height: 10%;
+    border: none;
+    padding-top: 10px;
+    background-color: rgb(20, 20, 20);
+
+}
+
+.recipe-form input[type=number] {
+    width: 20%;
+    padding-top: 10px;
+}
+
+.recipe-form input[type=password] {
+    width: 50%;
+}
+
+.recipe-form input[type=submit] {
+    width: 33%;
+    color: orangered;
+    border-radius: 10px;
+    transition: all 1s ease-in-out; 
+    padding-top: 10px;
+}
+
+.recipe-form input[type=submit]:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+.recipe-form input:focus {
+    border: none;
+    outline: none;
+
+}
+
+.recipe-form ::placeholder {
+    color: white;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
 }
