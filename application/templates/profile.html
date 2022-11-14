@@ -49,8 +49,16 @@
                                 <h5 class="recipe-card-title card-title">{{recipe.name}}</h5>
                                 <h6 class="recipe-card-author card-subtitle mb-2 text-muted">Created by: {{ recipe.author }}</h6>
                                 <p class="recipe-card-text card-text">{{ recipe.description }}</p>
-                                <a href="#" class="card-link"></a>
                             </div>
+                        </div>
+                        <div class="row">
+                            <a href="{{ url_for('update_recipe', recipe_id=recipe.id) }}">
+                                <div class="col-6 offset-3 profile-recipe-button">
+                                    <p>
+                                        <i class="text-center fa-thin fa-pen-to-square fa-2x profile-recipe-icon"></i></a>
+                                    </p>
+                                </div> 
+                            </a>
                         </div>
                     </div>
                 {% endif %}

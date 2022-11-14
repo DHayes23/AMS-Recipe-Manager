@@ -67,6 +67,7 @@ def signup():
 
 
 @app.route('/add_recipe', methods = ['GET', 'POST'])
+@login_required
 def add_recipe():
     form = RecipeForm()
 
@@ -90,3 +91,25 @@ def add_recipe():
             
 
     return render_template('add_recipe.html', form=form)
+
+
+@app.route('/update_recipe/<int:recipe_id>', methods = ['GET', 'POST'])
+@login_required
+def update_recipe(recipe_id):
+    recipe_to_update = Recipe.query.get(recipe_id)
+    form = RecipeForm()
+
+    if request.method == 'POST':
+        recipe_to_update.name = form.name.data
+        recipe_to_update.author = current_user.username
+        recipe_to_update.description = form.description.data
+        recipe_to_update.servings = form.servings.data
+        recipe_to_update.diet = form.diet.data
+        recipe_to_update.ingredients = form.ingredients.data
+        recipe_to_update.instructions = form.instructions.data
+        db.session.commit()
+
+        return(redirect(url_for('index')))
+    
+    return render_template('update_recipe.html', recipe_to_update=recipe_to_update, form=form)
+        

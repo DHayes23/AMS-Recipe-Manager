@@ -32,11 +32,11 @@ class RecipeForm(FlaskForm):
     name = StringField("Name")
     description = StringField("Description")
     servings = IntegerField("Servings")
+    ingredients = StringField("Ingredients")
+    instructions = StringField("Instructions")
     diet = SelectField("Diet", choices=[
         ("meat_eater", "Meat Eater"), 
         ("vegetarian", "Vegetarian"), 
         ("vegan", "Vegan")
     ])
-    ingredients = StringField("Ingredients")
-    instructions = StringField("Instructions")
     submit = SubmitField("Submit")

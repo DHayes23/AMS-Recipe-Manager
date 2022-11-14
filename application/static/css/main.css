@@ -324,3 +324,33 @@
 .profile-heading-span {
     color: orangered;
 }
+
+.profile-recipe-button {
+    background-color: rgb(35, 35, 35);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.9), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; 
+}
+
+
+.profile-recipe-button:hover {
+    box-shadow: 5px 5px 16px inset rgba(114, 114, 114, 0.35), -5px -5px 16px inset rgba(0, 0, 0, 0.7);
+}
+
+.profile-recipe-icon {
+    display:inline-block;
+    line-height: 50px;
+    color:orangered;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 1.5rem;
+    padding-left: 0.4rem;
+    
+}

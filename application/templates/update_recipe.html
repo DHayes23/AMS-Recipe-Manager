@@ -1,22 +1,28 @@
 <body>
-    <h1>Add a new recipe:</h1>
+    <h1>Update Recipe:</h1>
     <p>
         <div class='form'>
             <form method='POST' action=''>
                 <!-- hidden_tag() is required for form validation -->
                 {{ form.hidden_tag() }}
                 <!-- Each field displays its label followed by the input field itself -->
+                {{ recipe_to_update.name }}
                 {{ form.name.label }} {{ form.name }}
                 <br>
+                {{ recipe_to_update.description }}
                 {{ form.description.label }} {{ form.description }}
                 <br>
+                {{ recipe_to_update.servings }}
                 {{ form.servings.label }} {{ form.servings }}
                 <br>
+                {{ recipe_to_update.diet }}
+                {{ form.diet.label }} {{ form.diet }}
+                <br>
+                {{ recipe_to_update.ingredients }}
                 {{ form.ingredients.label }} {{ form.ingredients }}
                 <br>
+                {{ recipe_to_update.instructions }}
                 {{ form.instructions.label }} {{ form.instructions }}
-                <br>
-                {{ form.diet.label }} {{ form.diet }}
                 <br>
                 <!-- form.submit is a button -->
                 {{ form.submit }}
