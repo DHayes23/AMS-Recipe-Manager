@@ -1,6 +1,7 @@
 from flask import url_for
 from flask_testing import TestCase
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
+from flask_bcrypt import Bcrypt
 from application import app, db
 from application.models import User, Recipe
 import os
@@ -13,7 +14,8 @@ class TestBase(TestCase):
             SQLALCHEMY_DATABASE_URI = 'sqlite:///',
             SECRET_KEY = os.environ.get("TEST_DB_SECRET_KEY"),
             DEBUG = True,
-            WTF_CSRF_ENABLED = False
+            WTF_CSRF_ENABLED = False,
+            LOGIN_DISABLED = True
         )
         return app
 
@@ -22,9 +24,9 @@ class TestBase(TestCase):
         db.create_all()
 
         # Create test recipe
-
+        bcrypt=Bcrypt(app)
         test_user = User(
-            username="Test Username: John Doe",
+            username="TestUsername",
             password = "TestPassword"
             )
 
@@ -50,21 +52,35 @@ class TestBase(TestCase):
 
 
 class TestRoutes(TestBase):
-
-    # Tests all non-authenticated routes for correct response
-    def test_index_get(self):
-        response = self.client.get(url_for('index'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_login_get(self):
-        response = self.client.get(url_for('login'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_signup_get(self):
-        response = self.client.get(url_for('signup'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_view_recipe_get(self):
-        response = self.client.get(url_for('view_recipe', recipe_id=1))
-        self.assertEqual(response.status_code, 200)
     
+# Test Template Response Codes
+
+    def test_profile_get(self):
+        response = self.client.get(url_for('profile'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_add_recipe_get(self):
+        response = self.client.get(url_for('add_recipe', recipe_id=1))
+        self.assertEqual(response.status_code, 200)
+
+# Test Recipe Creation Functionality
+
+class TestAddRecipe(TestBase):
+
+    def test_add_recipe(self):
+        response = self.client.post(
+            url_for('add_recipe'),
+            data = dict(
+
+                name="Test Name: Sandwich",
+                author="Jane Doe", 
+                description = "Test Description: A basic sandwich.",
+                cooking_time = 5,
+                servings = 1,
+                diet = 'Test Diet: Vegetarian',
+                ingredients = 'Test Ingredients: Bread, Lettuce',
+                instructions = 'Test Instructions: Make the sandwich. Serve.'),
+                follow_redirects=True
+        )
+
+        assert Recipe.query.filter_by(name="Test Name: Sandwich").first().id == 2
