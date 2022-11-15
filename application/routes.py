@@ -115,9 +115,9 @@ def update_recipe(recipe_id):
         form.instructions.data = recipe_to_update.instructions
         
 
-    if recipe_to_update.author == current_user.username and request.method == 'POST':
+    if recipe_to_update.author == (current_user.username if not isinstance(current_user, AnonymousUserMixin) else 'Anonymous') and request.method == 'POST':
         recipe_to_update.name = form.name.data
-        recipe_to_update.author = current_user.username
+        recipe_to_update.author = current_user.username if not isinstance(current_user, AnonymousUserMixin) else 'Anonymous'
         recipe_to_update.description = form.description.data
         recipe_to_update.servings = form.servings.data
         recipe_to_update.diet = form.diet.data
@@ -135,7 +135,7 @@ def update_recipe(recipe_id):
 @login_required
 def delete_recipe(recipe_id):
     recipe_to_delete = Recipe.query.get(recipe_id)
-    if recipe_to_delete.author == current_user.username:
+    if recipe_to_delete.author == current_user.username if not isinstance(current_user, AnonymousUserMixin) else 'Anonymous':
 
         db.session.delete(recipe_to_delete)
         db.session.commit()
