@@ -9,7 +9,7 @@
 <section id="profile-section">
     <div class="row">
         <div class="col-4 offset-4 text-center">
-            <h1 id="profile-heading">Hi <span class="profile-heading-span">{{current_user.username}}</span>, welcome to your profile.</h1>
+            <h1 id="profile-heading">Hi <span class="profile-heading-span">{{ current_user.username |title }}</span>, welcome to your profile.</h1>
             <p class="profile-sub-heading">
                 You can view, edit and delete your recipes here.
             </p>
@@ -24,6 +24,7 @@
             </div> 
         </a>
     </div>
+
     <div class="container">
         <div class="row text-center">
             {% for recipe in all_recipes %}

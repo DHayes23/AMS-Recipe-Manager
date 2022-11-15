@@ -16,8 +16,3 @@ document.querySelectorAll('.recipe-card').forEach(div => {
       this.classList.add('animate__backOutRight');
     })
   });
-
-// Footer Copyright Injection
-
-  current_year = new Date().getFullYear();
-  document.getElementById("copyright-text").innerHTML = `Denis Hayes © ${current_year}`;

@@ -2,7 +2,7 @@
 
  ## **Introduction**
 ---
-### This project has been completed according to the SFIA Framework, to satisfy the deliverable requested by AMS to assess familiarity/competency with the core concepts that have so far been covered within the training program.
+### This project has been completed according to the SFIA Framework, to satisfy the deliverable requested by AMS to assess familiarity/competency with the core concepts that have so far been covered within the QA DevOps training program.
 
 <br>
 
