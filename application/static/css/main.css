@@ -36,6 +36,10 @@
     font-family: 'Red Hat Mono';
 }
 
+.navbar-brand:hover {
+    color: white;
+}
+
 #brand-span {
     color: orangered;
 }
