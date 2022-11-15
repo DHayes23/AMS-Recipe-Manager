@@ -223,7 +223,7 @@
 
 /* Footer */
 
-#copyright-text {
+#copyright-text p{
     color: white;
     font-family: 'Comfortaa';
     margin-bottom: 50px;
