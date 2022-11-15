@@ -81,11 +81,11 @@
                 </div>
                 {% endfor %}
                 {% if not all_recipes and not current_user.is_authenticated %}
-                <h1 class="text-center no-recipe-message-index">Don't see any recipes? <a href="{{ url_for('login') }}" class="no-recipe-message-link"><span class="no-recipe-message-span">Log in</span></a> to add the first one</h1>
+                <h1 class="text-center no-recipe-message-index">Don't see any recipes? <a href="{{ url_for('login') }}" class="no-recipe-message-link"><span class="no-recipe-message-span">Log In</span></a> to add the first one</h1>
                 {% endif %}
 
                 {% if not all_recipes and current_user.is_authenticated %}
-                <h1 class="text-center no-recipe-message-index">Don't see any recipes? Click the button above to <span class="no-recipe-message-span">create</span> the first one</h1>
+                <h1 class="text-center no-recipe-message-index">Don't see any recipes? Click the button above to <span class="no-recipe-message-span">Create</span> the first one</h1>
                 {% endif %}
             </div>
         </div>
