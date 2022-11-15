@@ -566,3 +566,25 @@
     background-color: rgb(20, 20, 20);
     box-shadow: 5px 5px 16px inset rgba(0, 0, 0, 0.7), -5px -5px 16px inset rgba(114, 114, 114, 0.25);
 }
+
+.no-recipe-message-index {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 2rem;
+    margin-top: 75px;
+}
+
+.no-recipe-message-profile {
+    color: white;
+    font-family: "Poiret One";
+    font-size: 2rem;
+    margin-top: 75px;
+}
+
+.no-recipe-message-span {
+    color: orangered;
+}
+
+.no-recipe-message-link {
+    text-decoration: none;
+}
