@@ -19,32 +19,55 @@
     />
     <link rel="shortcut icon" type="image/png" 
     href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     {% block head %} {% endblock %}
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Recip<span id="brand-span">ease</span></a>
+        <a class="navbar-brand" href="{{url_for('index')}}">Recip<span id="brand-span">ease</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#">Home</a>
+              <a class="nav-link " aria-current="page" href="{{url_for('index')}}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
-            </li>
-            <li class="nav-item">
-              <a id="sign-up-link" class="nav-link" href="#">Sign Up</a>
-            </li>
+            {% if not current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a id="sign-up-link" class="nav-link" href="{{url_for('signup')}}">Sign Up</a>
+              </li>
+            {% endif %}
+
+            {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('profile')}}">My Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('logout')}}">Log Out</a>
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </nav>
     {% block body %} {% endblock %}
+    <footer>
+      <div class="row">
+        <div class="col-2 offset-5">
+          <div id="copyright-text" class="text-center">
+            <p>Denis Hayes © 2022</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <!-- Bootstrap JS CDN -->
   <script
@@ -57,4 +80,5 @@
     src="https://kit.fontawesome.com/33c5bbb6e7.js"
     crossorigin="anonymous"
   ></script>
+  <script src="/static/js/main.js"></script>
 </html>

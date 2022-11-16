@@ -1,0 +1,5 @@
+env.py
+*.db
+__pycache__/
+.pyc
+.coverage

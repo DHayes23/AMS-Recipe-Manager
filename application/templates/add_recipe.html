@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Recipease | Create a Recipe</title>
+{% endblock %}
+
+{% block body %}
+<section class="recipe-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-4 offset-4 text-center">
+                <h1 class="recipe-heading"><span class="recipe-heading-span">Create</span> a new recipe</h1>
+            </div>
+            <form method='POST' action=''>
+                <div class="row">
+                    <div class="recipe-form recipe-form-left col-4 text-center">
+                        <!-- hidden_tag() is required for form validation -->
+                        {{ form.hidden_tag() }}
+                        <!-- Each field displays its label followed by the input field itself -->
+                        {{ form.name.label }} <br> {{ form.name }}
+                        <br>
+                        {{ form.diet.label }} <br> {{ form.diet }}
+                        <br>
+                        {{ form.description.label }} <br> {{ form.description }}
+                        <br>
+                        <br>
+                        {{ form.cooking_time.label }} <br> {{ form.cooking_time }}
+                        <br>
+                        <br>
+                        {{ form.servings.label }} <br> {{ form.servings }}
+                        <br>
+                    </div>
+                    <div class="recipe-form recipe-form-right text-center col-7 offset-1">
+                        {{ form.ingredients.label }} <br> {{ form.ingredients }}
+                        <br>
+                        {{ form.instructions.label }} <br> {{ form.instructions }}
+                        <!-- form.submit is a button -->
+                        <br>
+                        {{ form.submit }}
+                        <br>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

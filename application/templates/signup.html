@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Recipease | Sign Up</title>
+{% endblock %}
+
+{% block body %}
+<section class="auth-section">
+    <div class="row">
+        <div class="auth-heading col-4 offset-4 text-center">
+            <h1><span class="auth-heading-span">Sign Up</span> for an account to start creating and sharing your recipes</h1>
+        </div>
+        <div class="auth-form col-4 offset-4 text-center">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.username }}
+                <br>
+                {{ form.password }}
+                <br>
+                {{ form.submit }}
+            </form>
+        </div>
+    </div>
+    
+</section>
+
+{% endblock %}
