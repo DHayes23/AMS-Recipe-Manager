@@ -168,12 +168,57 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 
 ### **User Flow Map**
 The following User Flow Map describes the layout of the site and the expected paths that a user may take.
+
+<br>
+
  ![](README_Assets/Recipease_User_Flow_Chart.jpeg)
 
  ## **Design Notes**
 ---
  ## **Technologies Used**
 ---
+### **Flask**
+* The Flask micro-framework has been used to create this application.
+* Flask provides built-in templating, routing and WSGI.
+* Flask can be extended using a variety of packages, which proved instrumental in the development of this application.
+
+### **Flask-Login**
+* Flask-Login provides the basis for the site's authentication functionalities.
+* Pre-built Signup and Login functionality, as well as the hashing of passwords using Bcrypt, allows for the safe and hassle-free registration of new users to the site.
+* Flask Login allows for the gating of content depending on a user's authentication status, a feature used to protect the database from unauthorised access.
+
+### **SQLite**
+* SQLite provides an in-memory database for use in a non-production environment. 
+* In the event that this project was to be used in production environment, an alternative database solution would be required.
+
+### **SQLAlchemy**
+* SQLAlchemy is the library used that served as the Object Relational Mapping tool, which translate Python classes to tables within the database.
+
+### **WTForms**
+* WTForms is the library used to render the forms into which users input their data.
+* This library features CSRF protection and data validation, both of which secure the contents of the database.
+
+### **Github**
+* The version control of this project is handled by GitHub.
+* Using Github and its GUI makes perfomring Git actions more visual and straightforward, allowing easy identification of key information at a glance.
+
+### **GitPod**
+* GitPod was the IDE used during the development of this project.
+* Essentially a cloud based version of VS Code, GitPod allows for great mobility and flexibility, being usable on almost any device.
+
+### **Font Awesome**
+* Font Awesome is used to provide the iconography of the site.
+* Font Awesome's functionality is served via a CDN.
+
+### **Trello**
+* Trello was used throughout the project to keep track of the various tasks to be completed in the realisation of the work.
+
+### **Figma**
+* Figma was used to create high fidelity design mockups of the site's templates. 
+
+### **Balsamiq**
+* Balsamiq was used to create low fidelity wireframes of the site's templates. 
+
  ## **Acknowledgments**
 ---
 ### My sincere thanks to the following people and groups; I greatly appreciate the assistance and support that they provided during the development of this app.
