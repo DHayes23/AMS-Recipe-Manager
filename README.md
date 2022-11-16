@@ -35,7 +35,7 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 11. [Site Structure](#site-structure)
 12. [Design](#design)
 13. [Technologies Used](#technologies-used)
-14. [Acknowledgments](#acknowledgments)
+14. [Acknowledgements](#acknowledgements)
 
  ## **Project Aims**
 ---
@@ -58,14 +58,14 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 ### Returning User
 * As a returning user I want to be able to quickly and easily Log In to the site.
 * As a returning user I want to be able to easily create and update recipes.
-* As a returning user I want to be able to delete recipes that I nolonger want to display.
+* As a returning user I want to be able to delete recipes that I no longer want to display.
 * As a returning user I want to be able to easily see all of the recipes that I have created.
 
  ## **Planning**
 ---
 The development of this project has been carefully planned and executed according to a Trello Board established for this purpose.
 
-Built in Trello features such as labels and descriptions allow for 'at a glace' understanding of tasks and priorities.
+Built in Trello features such as labels and descriptions allow for 'at a glance' understanding of tasks and priorities.
 
 
 **Read-Only access to the Trello board is available here:
@@ -131,7 +131,7 @@ Thankfully, none of the documented risks materialised, partially due to luck but
 
 ### **Authentication - Login Required**
 * Flask-Login provides the Login Required functionality.
-* Certain templates and functions within the application are unaccessible to anonymous users. This, in conjunction with other measures, protects the content of the database and the application.
+* Certain templates and functions within the application are inaccessible to anonymous users. This, in conjunction with other measures, protects the content of the database and the application.
 
 ### **Authentication - Content Protection**
 * Custom code has been implemented which prevents one logged in user from accessing the content of another user.
@@ -159,7 +159,7 @@ Thankfully, none of the documented risks materialised, partially due to luck but
 
 ### **Update Recipe**
 * By clicking on the Update Recipe icon present in the Profile template, the user can access the Update Recipe template which allows them to change the data of a recipe that they have created.
-* The Update Recipe template is a carbon copy of the Add Recipe template, except in that it is automatically prefilled with a recipe's existing data.
+* The Update Recipe template is a carbon copy of the Add Recipe template, except in that it is automatically pre-filled with a recipe's existing data.
 
 ### **Delete Recipe**
 * By clicking on a recipe's delete icons (either in the Profile template's recipe display or in the View Recipe template) the user is presented with a modal, asking them to confirm the deletion.
@@ -170,7 +170,7 @@ Thankfully, none of the documented risks materialised, partially due to luck but
 ---
 ### **Separate Instruction/Ingredient Tables**
 * Having separate Instruction and Ingredient tables would allow users to enter each of their instructions step by step and each ingredient one by one.
-* In their current implementation, the ingredients and instructions sections of the form are somewhat freeform, with their contents being displayed according to the way the user inputs the information.
+* In their current implementation, the ingredients and instructions sections of the form are somewhat free-form, with their contents being displayed according to the way the user inputs the information.
 * This new structure would allow for a homogenised recipe viewing experience
 * In this format, additional page styling could present the list of instructions in ordered steps, perhaps with checkboxes for the user to tick as they work their way through the recipe.
 
@@ -208,7 +208,7 @@ At the time of writing, running the above command will return the following:
 
 The tests check (almost, see below) the entire custom codebase in routes.py, ensuring that the site's functionality is performing as expected. All of the actions that a user can undertake are tested and none of the tests currently fail. The test suite has been designed with expansion in mind, allowing for the addition of extra tests to examine the results of edge case user inputs.
 
-The functionality not tested is that which relies on Flask-Login. Such testing of an external framework is beyond the scope of this project, and while it would be nice to have 100% coverage, I have receieved advice from a QA training that such a thing would not be feasible in the timeframe available.
+The functionality not tested is that which relies on Flask-Login. Such testing of an external framework is beyond the scope of this project, and while it would be nice to have 100% coverage, I have received advice from a QA training that such a thing would not be feasible in the time-frame available.
 
 
  ## **Known Issues**
@@ -276,7 +276,7 @@ The main colours used throughout the website can be viewed below:
 ### Design Documents
 Following on from the wireframes created in the planning phase of the project, higher fidelity design documents were created to more accurately capture the feel of the site, and to provide a strong basis from which to implement the required HTML and CSS.
 
-These design documents can be viewd below:
+These design documents can be viewed below:
 
 ### Index
 ![](README_Assets/Designs/Index.png)
@@ -318,7 +318,7 @@ These design documents can be viewd below:
 
 ### **Github**
 * The version control of this project is handled by GitHub.
-* Using Github and its GUI makes perfomring Git actions more visual and straightforward, allowing easy identification of key information at a glance.
+* Using Github and its GUI makes performing Git actions more visual and straightforward, allowing easy identification of key information at a glance.
 
 ### **GitPod**
 * GitPod was the IDE used during the development of this project.
@@ -332,12 +332,12 @@ These design documents can be viewd below:
 * Trello was used throughout the project to keep track of the various tasks to be completed in the realisation of the work.
 
 ### **Figma**
-* Figma was used to create high fidelity design mockups of the site's templates. 
+* Figma was used to create high fidelity design mock-ups of the site's templates. 
 
 ### **Balsamiq**
 * Balsamiq was used to create low fidelity wireframes of the site's templates. 
 
- ## **Acknowledgments**
+ ## **Acknowledgements**
 ---
 ### My sincere thanks to the following people and groups; I greatly appreciate the assistance and support that they provided during the development of this app.
 
