@@ -93,6 +93,13 @@ These initial wireframes can be viewed below.
 
  ## **Risk Assessment**
 ---
+A thorough risk assessment was performed at the outset of the planning phase, with new risks and mitigating actions being added to it over the course of the project.
+
+Thankfully, none of the documented risks materialised, partially due to luck but predominantly due to careful and meticulous planning and execution. The risk assessment is available within the project files, and an image of the finalised document can be seen below.
+
+### Risk Assessment
+![](README_Assets/Risk_Assessment.png)
+
  ## **Existing Features**
 ---
 ### **Navigation Bar**
