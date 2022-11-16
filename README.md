@@ -49,6 +49,18 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 
  ## **User Stories**
 ---
+### First Time User
+* As a first time user I want to quickly understand the purpose of the website.
+* As a first time user I want to be able to navigate the site easily.
+* As a first time user I want to be able to view other people's recipes, allowing me to ascertain whether or not this is a community I want to be a part of.
+* As a first time user I want to be able to easily Sign Up to the site, should I choose to do so.
+
+### Returning User
+* As a returning user I want to be able to quickly and easily Log In to the site.
+* As a returning user I want to be able to easily create and update recipes.
+* As a returning user I want to be able to delete recipes that I nolonger want to display.
+* As a returning user I want to be able to easily see all of the recipes that I have created.
+
  ## **Planning**
 ---
 The development of this project has been carefully planned and executed according to a Trello Board established for this purpose.
