@@ -134,12 +134,22 @@
 * Currently, the site's recipes are broken into 3 basic dietary categories of 'Meat Eater', 'Vegetarian' and 'Vegan'.
 * These categories do not account for the wide variety of dietary categories in the real world and should be expanded upon.
 
-
+### Responsivity
+* In its current form, the site is not functional across all screen sizes, having been designed on, and designed for, large desktop monitors.
+* In future development, the intention is to update the site to be functional and pleasant to use across a wide variety of screen sizes and ratios.
 
  ## **Testing**
 ---
  ## **Known Issues**
 ---
+### Button Edges Unresponsive
+* Presently, some of the site's buttons do not register a click event if the user clicks on the very outward edge.
+* Buttons affected: Add Recipe Button, Edit Recipe Button, Delete Recipe Button
+* This unintended occurrence is repeatable, but not of a severity that would hamper the user's experience. In fact, it is unlikely that the user would identify the problem unless looking for it.
+* This issue can be fixed by restructuring the layout of the affected button's HTML, and then updating the CSS to take the changes into account.
+### Lack of Responsivity
+* In its current form, the site is not functional across all screen sizes, having been designed on and for large desktop monitors.
+* This issue can be fixed by adding media queries to the various site elements, resizing and removing elements to improve the small screen experience.
  ## **Data Structure**
 ---
  ## **Site Structure**
