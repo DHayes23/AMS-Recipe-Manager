@@ -14,6 +14,11 @@
 
 <br>
 
+**Read-Only access to the project's Trello board is available here:
+https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613D/tasks**
+
+<br>
+
  ## **Table of Contents**
 ---
 
@@ -28,7 +33,7 @@
 9. [Testing](#testing)
 10. [Data Structure](#data-structure)
 11. [Site Structure](#site-structure)
-12. [Design Notes](#design-notes)
+12. [Design](#design)
 13. [Technologies Used](#technologies-used)
 14. [Acknowledgments](#acknowledgments)
 
@@ -53,6 +58,27 @@ Built in Trello features such as labels and descriptions allow for 'at a glace' 
 
 **Read-Only access to the Trello board is available here:
 https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613D/tasks**
+
+Wireframes created using Balsamiq were used to plan the basic intended layout of the website.
+
+These initial wireframes can be viewed below.
+
+### Index
+![](README_Assets/Wireframes/Index.png)
+
+### Log In / Sign Up
+![](README_Assets/Wireframes/Log_In_Sign_Up.png)
+
+### Profile
+![](README_Assets/Wireframes/Profile.png)
+
+### Create/Update Recipe
+![](README_Assets/Wireframes/Create_Update_Recipe.png)
+
+### View Recipe
+![](README_Assets/Wireframes/View_Recipe.png)
+
+
  ## **Risk Assessment**
 ---
  ## **Existing Features**
@@ -196,8 +222,39 @@ The following User Flow Map describes the layout of the site and the expected pa
 
  ![](README_Assets/Recipease_User_Flow_Chart.jpeg)
 
- ## **Design Notes**
+ ## **Design**
 ---
+### Overview
+The website has been designed to look sleek and modern, and includes the use of Neumorphic elements to give the site a tactile feel. Buttons and forms are designed to be inviting, and subtle animation effects engage the user and let them see the results of their actions.
+Additional animation was present in early versions of the site, however these animations were sidelined at a certain point in development. Reimplementing these animations would not take significant time or energy, and so it is to be hoped that at some point in the future that they will make a return.
+
+### Colours
+Dark colours were used throughout the project, with the aim being to use two similar colours for structure, one for text and another for highlighting different important information.
+
+The main colours used throughout the website can be viewed below:
+
+![](README_Assets/Color_Palette.png)
+
+### Design Documents
+Following on from the wireframes created in the planning phase of the project, higher fidelity design documents were created to more accurately capture the feel of the site, and to provide a strong basis from which to implement the required HTML and CSS.
+
+These design documents can be viewd below:
+
+### Index
+![](README_Assets/Designs/Index.png)
+
+### Authentication
+![](README_Assets/Designs/Authentication.png)
+
+### Profile
+![](README_Assets/Designs/Profile.png)
+
+### Create/Update Recipe
+![](README_Assets/Designs/Create_Update_Recipe.png)
+
+### View Recipe
+![](README_Assets/Designs/View_Recipe.png)
+
  ## **Technologies Used**
 ---
 ### **Flask**
