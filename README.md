@@ -22,7 +22,7 @@
 3. [User Stories](#user-stories)
 4. [Planning](#planning)
 5. [Risk Assessment](#risk-assessment)
-6. [Current Features](#current-features)
+6. [Existing Features](#existing-features)
 7. [Upcoming Features](#upcoming-features)
 8. [Known Issues](#known-issues)
 9. [Testing](#testing)
@@ -55,7 +55,7 @@ Built in Trello features such as labels and descriptions allow for 'at a glace' 
 https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613D/tasks**
  ## **Risk Assessment**
 ---
- ## **Current Features**
+ ## **Existing Features**
 ---
 ### **Navigation Bar**
 * A fixed-to-top Bootstrap Navbar, is visible on all pages of the site allowing users to easily navigate the different features of the application.
