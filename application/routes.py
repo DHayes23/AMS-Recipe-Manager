@@ -30,12 +30,12 @@ def login():
     # The following line should be commented out to allow for testing,
     # and uncommented in production to ensure form validation.
     
-    # if form.validate_on_submit():
-    user = User.query.filter_by(username=form.username.data).first()
-    if user:
-        if bcrypt.check_password_hash(user.password, form.password.data):
-            login_user(user)
-            return redirect(url_for('profile'))
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user:
+            if bcrypt.check_password_hash(user.password, form.password.data):
+                login_user(user)
+                return redirect(url_for('profile'))
 
 
     return render_template('login.html', form=form)
@@ -78,7 +78,7 @@ def add_recipe():
         # The following line should be commented out to allow for testing,
         # and uncommented in production to ensure form validation.
 
-        # if form.validate_on_submit():
+        if form.validate_on_submit():
 
             recipe = Recipe(
                 name = form.name.data,
