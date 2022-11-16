@@ -159,6 +159,29 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 * This issue can be fixed by adding media queries to the various site elements, resizing and removing elements to improve the small screen experience.
  ## **Data Structure**
 ---
+### **Database Schema**
+* Currently, the database comprises of two tables:
+    * User
+    * Recipe
+* The User table holds the data about the site's registered users, including:
+    * ID
+    * Username
+    * Password
+* The Recipe table holds the data about all of the site's recipes, as created by users. This data includes:
+    * ID
+    * Name
+    * Author
+    * Description
+    * Cooking_Time
+    * Servings
+    * Diet
+    * Ingredients
+    * Instructions
+
+The following Entity Relationship Diagram describes the contents of the database, including future plans for additional tables.
+![](README_Assets/Recipease_Entity_Relationship_Diagram.jpeg)
+
+
  ## **Site Structure**
 ---
 ### **Layout:**
