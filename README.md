@@ -109,9 +109,33 @@
 * By clicking on the Update Recipe icon present in the Profile template, the user can access the Update Recipe template which allows them to change the data of a recipe that they have created.
 * The Update Recipe template is a carbon copy of the Add Recipe template, except in that it is automatically prefilled with a recipe's existing data.
 
+### Delete Recipe
+* By clicking on a recipe's delete icons (either in the Profile template's recipe display or in the View Recipe template) the user is presented with a modal, asking them to confirm the deletion.
+* If the user confirms the deletion within the modal, the data related to that recipe is removed from the database and the user is returned to their Profile template.
+
 
  ## **Upcoming Features**
 ---
+### Separate Instruction/Ingredient Tables
+* Having separate Instruction and Ingredient tables would allow users to enter each of their instructions step by step and each ingredient one by one.
+* In their current implementation, the ingredients and instructions sections of the form are somewhat freeform, with their contents being displayed according to the way the user inputs the information.
+* This new structure would allow for a homogenised recipe viewing experience
+* In this format, additional page styling could present the list of instructions in ordered steps, perhaps with checkboxes for the user to tick as they work their way through the recipe.
+
+### Recipe Aggregation - Cookbooks
+* Allowing users to aggregate recipes into different collections or 'Cookbooks' would add value to the site.
+* Users should simply be able to create a new Cookbook instance, and when viewing a recipe should be able to click a dropdown to add the recipe to any of their existing Cookbooks.
+
+### Recipe Searching
+* Users should be able to easily search for specific recipes.
+* To achieve this, in all areas where a recipe display is present, the user should have access to a search input, which will filter the recipes displayed to match the user's search terms.
+
+### Additional Diet Categories
+* Currently, the site's recipes are broken into 3 basic dietary categories of 'Meat Eater', 'Vegetarian' and 'Vegan'.
+* These categories do not account for the wide variety of dietary categories in the real world and should be expanded upon.
+
+
+
  ## **Testing**
 ---
  ## **Known Issues**
