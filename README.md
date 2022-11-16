@@ -161,6 +161,15 @@ https://trello.com/invite/b/KeJbV393/ATTI7cae7677ff9adf76bd7ff788deaa67b80957613
 ---
  ## **Site Structure**
 ---
+### **Layout:**
+* The site has been designed with simplicity of navigation at the forefront of concerns.
+* The main Navigation Bar is present at the head of every page, allowing the user to easily identify and move between the different sections of the site.
+* The Index template has been designed to inform a new user of the purpose of the site, with careful highlighting to draw the eye to different important information/buttons.
+
+### **User Flow Map**
+The following User Flow Map describes the layout of the site and the expected paths that a user may take.
+ ![](README_Assets/Recipease_User_Flow_Chart.jpeg)
+
  ## **Design Notes**
 ---
  ## **Technologies Used**
