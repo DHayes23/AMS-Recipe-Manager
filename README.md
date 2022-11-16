@@ -185,6 +185,25 @@ These initial wireframes can be viewed below.
 
  ## **Testing**
 ---
+This project utilises Unit Testing, as provided by the PyTest library, to test the various functions of the application.
+
+Once the database has been initialised by create.py, the tests can be run by entering the following command into the terminal:
+
+```
+python3 -m pytest --cov=application
+```
+
+**NB:** The tests as currently supplied will only function correctly in the development branch, as this branch has form validation disabled. If form validation is not disabled, the tests will not function correctly.
+
+At the time of writing, running the above command will return the following:
+
+![](README_Assets/Test-Report.png)
+
+The tests check (almost, see below) the entire custom codebase in routes.py, ensuring that the site's functionality is performing as expected. All of the actions that a user can undertake are tested and none of the tests currently fail. The test suite has been designed with expansion in mind, allowing for the addition of extra tests to examine the results of edge case user inputs.
+
+The functionality not tested is that which relies on Flask-Login. Such testing of an external framework is beyond the scope of this project, and while it would be nice to have 100% coverage, I have receieved advice from a QA training that such a thing would not be feasible in the timeframe available.
+
+
  ## **Known Issues**
 ---
 ### **Button Edges Unresponsive**
