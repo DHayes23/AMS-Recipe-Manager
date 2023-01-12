@@ -3,16 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - "sudo apt update"
-      - "sudo apt install python3"
-      - "sudo apt install python3-pip"
+      - sudo apt update
+      - sudo apt install python3
+      - sudo apt install python3-pip
   pre_build:
     commands:
-      - "pip3 install -r requirements.txt"
-      - "python3 create.py"
+      - pip3 install -r requirements.txt
+      - python3 create.py
   build:
     commands:
-      - "pytest tests/test_app_auth_enabled.py"
+      - pytest tests/test_app_auth_enabled.py
   post_build:
     commands:
-      - "echo Build Complete!"
+      - echo Build Complete!
