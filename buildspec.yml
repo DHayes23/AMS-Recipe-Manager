@@ -12,6 +12,6 @@ phases:
   build:
     commands:
       - "pytest tests/test_app_auth_enabled.py"
-  post-build:
+  post_build:
     commands:
       - "echo Build Complete!"
